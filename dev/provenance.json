@@ -1,0 +1,54 @@
+{
+  "seed": 5302,
+  "version": "2.0.0",
+  "sklearn": "1.7.2",
+  "numpy": "2.3.3",
+  "features": [
+    "QS ranking",
+    "Annual tuition payable (\u00a3)",
+    "Social media presence (0\u2013100)",
+    "Interactive learning (%)",
+    "Personal tutorials (hours/term)"
+  ],
+  "developmentSize": 10000,
+  "testSize": 2000,
+  "recordsPerRegion": 12000,
+  "totalRecords": 48000,
+  "regions": {
+    "asia": "East and South East Asia",
+    "africa": "Africa",
+    "europe": "Europe and North America",
+    "rest": "Rest of the World"
+  },
+  "provenance": {
+    "asia": {
+      "splitHash": "0f521ce2307a4bcca561e685d793199be6637cc3bc638e91c72dc3dbe3cbf4a7",
+      "foldHash": "9a66d29805d70adb8322ea16a5bc22de322d671cae44b6487c60a93b25b45648",
+      "positiveDevelopment": 3277,
+      "positiveTest": 656,
+      "seed": 5302
+    },
+    "africa": {
+      "splitHash": "717a22de0146a7e73adbd52d6001fd0b69f6fd4dac7cbf74a3b2e56afa5a5e8e",
+      "foldHash": "78164a80b280e60e46147034cd2badbcfe907361e4b9363a8e3a9be745af846f",
+      "positiveDevelopment": 4659,
+      "positiveTest": 932,
+      "seed": 5402
+    },
+    "europe": {
+      "splitHash": "014c33f308695b4b153a02805aafab9f2380ffb7e0428339367a5a0ff62f8d6c",
+      "foldHash": "65df5294a39c12761fef588fa080120e522073f3cafe55b355bd35729cb70c43",
+      "positiveDevelopment": 4653,
+      "positiveTest": 930,
+      "seed": 5502
+    },
+    "rest": {
+      "splitHash": "dbc0ccb0d2746f459778449754aa3786823da388ac6d173320b152dee24ebfb0",
+      "foldHash": "eb42891f3a2715b907da955ca9c956a570293ac5218f2ea304b06632bb76fec5",
+      "positiveDevelopment": 4606,
+      "positiveTest": 921,
+      "seed": 5602
+    }
+  },
+  "cohortSize": 8000
+}
