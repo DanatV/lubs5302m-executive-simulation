@@ -69,7 +69,9 @@ See TESTING.md for actual checks and remaining limitations.
 
 ## GitHub Pages deployment
 
-This project has **not been published** as part of its creation.
+Public repository: [DanatV/lubs5302m-executive-simulation](https://github.com/DanatV/lubs5302m-executive-simulation).
+
+Student site: [Open the executive simulation](https://danatv.github.io/lubs5302m-executive-simulation/). GitHub Pages serves the `main` branch at the repository root. This is separate from the Decision Tree Builder.
 
 1. Create or select a GitHub repository for this simulation, separate from the Decision Tree Builder.
 2. Add the application files with index.html at the repository root. Do not upload `.venv`, temporary test files or credentials.
