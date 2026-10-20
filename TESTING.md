@@ -79,3 +79,12 @@ State transitions, allowlist validation, scenario outcomes, statistical assets a
 - Browser-local file storage behaviour may vary; JSON is the portable backup.
 - No GitHub Pages deployment or load test was performed. Subdirectory static serving was tested locally; the architecture makes no concurrent server-state assumptions.
 - Full-page screenshot tiling artefacts appeared after a headless viewport resize; separate viewport captures and DOM overflow checks were used to verify narrow layouts.
+
+## 20 October 2026 — balanced non-Asia signals (2.1.0)
+
+- Rebuilt all 64 configurations from synthetic data with the pinned model environment. All 48 non-Asia configurations have fees first, interactive learning/tutorials second and third, QS fourth, and positive social-media importance last. No measured values were manually rescaled.
+- At 100 trees / depth 4, importance relative to fees (tutorials, interactive learning, QS, social media): Africa (0.810, 0.820, 0.541, 0.100); Europe/North America (0.861, 0.844, 0.484, 0.150); Rest of World (0.820, 0.774, 0.522, 0.107). Ratios vary with hyperparameters; shallow forests suppress weaker signals.
+- Compared all 16 Asia model records with version 2.0: unchanged within numerical tolerance 1e-12. Business outcomes are unchanged.
+- Eight core test groups passed: all paths, metric reconciliation, ordering, default-ratio tolerances, imports and version consistency.
+- Offline Chrome browser suite passed: all 64 selections, all 12 endings, JSON/HTML/PDF exports, restored work, immutable evidence, storage failure, tablet/narrow reflow, and no page JavaScript errors.
+- Updated model version/storage key keeps previous browser sessions separate instead of reinterpreting their evidence.

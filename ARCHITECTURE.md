@@ -23,7 +23,7 @@ Synthetic records are generated with a fixed seed. Five-fold CV uses only the 10
 SVG importance/CV charts have accompanying data tables. Summary tree uses measured, fixed node boxes in a zoomable/scrollable SVG and a text outline. All user text is escaped. Self-contained report HTML embeds generated visuals and inline print-friendly styles; JSON contains the versioned session; browser printing uses a dedicated complete report region.
 
 ## Persistence
-Separate localStorage key lubs5302m-executive-v2. Meaningful edits save automatically; unavailable storage leaves an in-memory app with a persistent warning. Startup asks before restoring. Reset/replay explicitly confirms replacement; completed runs are offered an export first. Teams share one device; no cross-device sync.
+Separate localStorage key lubs5302m-executive-v2.1. Meaningful edits save automatically; unavailable storage leaves an in-memory app with a persistent warning. Startup asks before restoring. Reset/replay explicitly confirms replacement; completed runs are offered an export first. Teams share one device; no cross-device sync.
 
 ## Validation and tests
 Pure tests enumerate 12 paths, lock invariants, imports, metric arithmetic, CV summaries and tree thresholds. Browser tests cover file:// offline use, subdirectory hosting, workflow, storage failure, refresh, exports, focus, layouts and injection. Tests and limitations are reported honestly in TESTING.md. No remote deployment is part of this task.

@@ -1,4 +1,4 @@
-# Model card — version 2.0.0
+# Model card — version 2.1.0
 
 ## Purpose
 Synthetic recruitment prediction for Computer lab 1: Executive Business Simulation. No real people, recruitment data or population estimates are used. Region names describe fictional offer-holder origins, not the location of Northbridge University. Regional patterns are authored teaching assumptions. Business outcomes remain separate deterministic fiction, not causal RF estimates.
@@ -15,12 +15,12 @@ For East and South East Asia:
 `logit = -5.5 + 6*(rank<=100) + 2.8*(24000-fee)/5500 + 2*(social-50)/50 + .004*(interactive-40) + .02*(tutorial-2) + noise`.
 
 Elsewhere:
-`logit = -2 + 1*(rank<=100) + fee_effect*(24000-fee)/5500 + .65*(social-50)/50 + .012*(interactive-40) + .10*(tutorial-2) + noise`.
+`logit = 4*(24000-fee)/5500 + qs_effect*((rank<=100)-.44) + 3*(social-50)/50 + learning_effect*(interactive-47.5) + tutorial_effect*(tutorial-3.25) + noise`.
 
-Fee effect is 4.5 in Africa, 4.0 in Europe/North America and 3.7 elsewhere. These choices deliberately support the requested teaching contrast: QS first and social media third in the Asia group; fees first in other groups. The generator verifies the order of computed permutation importance across all 64 configurations. It never rewrites measured scores to achieve an order. They are not findings about real continents or individuals.
+The (qs_effect, learning_effect, tutorial_effect) coefficients are (4.9, .14, 1.9) for Africa and (4.7, .145, 2.0) for Europe/North America and Rest of the World. Version 2.1 strengthens teaching-related signals: tutorials and interactive learning target roughly three quarters of fee importance, QS roughly half, and social media a smaller positive contribution. These are approximate design targets, especially for the default 100-tree/depth-4 configuration; measured ratios vary with depth and ensemble size. Very shallow forests can under-represent weaker signals. Coefficients and the non-Asia forest seed were screened using development-fold importance, not holdout test accuracy. The fixed non-Asia seed reduces feature-subsampling imbalance in the smallest ensemble. These choices deliberately support the requested teaching contrast: QS first and social media third in the Asia group; fees first in other groups. The generator verifies the order of computed permutation importance across all 64 configurations. It never rewrites measured scores to achieve an order. They are not findings about real continents or individuals.
 
 ## Forests and evaluation
-16 settings per region: 10/50/100/300 trees crossed with depth 2/4/6/10. RandomForestClassifier uses bootstrap=True, max_features='sqrt', min_samples_leaf=20, seed 5302, and other scikit-learn 1.7.2 defaults. The same stratified development/test split and five shuffled stratified CV folds are reused across settings within a region. Final forests fit only the development records. All people are distinct, but institutions occur in both partitions: this does not establish generalisation to unseen universities or future conditions.
+16 settings per region: 10/50/100/300 trees crossed with depth 2/4/6/10. RandomForestClassifier uses bootstrap=True, max_features='sqrt', min_samples_leaf=20, forest seed 5302 for Asia and 5304 elsewhere, and other scikit-learn 1.7.2 defaults. The same stratified development/test split and five shuffled stratified CV folds are reused across settings within a region. Final forests fit only the development records. All people are distinct, but institutions occur in both partitions: this does not establish generalisation to unseen universities or future conditions.
 
 Permutation importance: three shuffles per feature per validation fold, measuring accuracy decrease. Mean and population SD pool 15 measurements. Values are percentage-point changes; they are not budget weights, causal returns or shares of 100%. The display sorts values descending, retaining their feature identity. Negative measurements are retained. Error bars are SD, not confidence intervals.
 

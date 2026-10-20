@@ -21,7 +21,7 @@ Model outputs are genuine precomputed random forests fitted to reproducible **sy
 
 ## Data and privacy
 
-No data is uploaded. Team number, decisions and optional text are stored under `lubs5302m-executive-v2` in this browser's localStorage. No identifiers beyond the team number are requested. Team numbers are labels, not accounts or passwords; teams do not synchronise. GitHub Pages does not collect submissions. Teams submit downloaded reports through Minerva or by email to d.valizade@leeds.ac.uk.
+No data is uploaded. Team number, decisions and optional text are stored under `lubs5302m-executive-v2.1` in this browser's localStorage. No identifiers beyond the team number are requested. Team numbers are labels, not accounts or passwords; teams do not synchronise. GitHub Pages does not collect submissions. Teams submit downloaded reports through Minerva or by email to d.valizade@leeds.ac.uk.
 
 Browser storage can be cleared or unavailable, particularly in private/restricted modes. The app remains usable and displays a warning. Browser storage for local files may differ between browsers and file locations. Export session JSON to preserve work reliably. Moving from file:// to the hosted site does not automatically carry saved work across; export then import.
 
@@ -109,3 +109,9 @@ No GitHub Actions configuration, environment variables or backend are needed. Th
 The continent selector refers to offer-holder origin: East and South East Asia, Africa, Europe and North America, or Rest of the World. Each group has 16 independently fitted configurations. Regional patterns are explicitly authored synthetic assumptions, not evidence about real populations. Charts and tables sort computed importance descending. The summary follows imposed QS → tuition → interactive-learning split features; lower thresholds and probabilities are fitted.
 
 One large optional reflection field replaces the seven earlier responses. Package D's interim intake is 2,800 / 8,000 = 35%, as confirmed by the lecturer. Interim ranks are A 99, B 110, C 110, D 105; final outcomes are unchanged. Old version-1 browser sessions remain under their original storage key and are not overwritten, but cannot be imported into version 2 because the evidence and scenario meanings changed. Keep old exported reports for earlier runs.
+
+## 20 October 2026 update (version 2.1.0)
+
+Rebalanced the synthetic relationships for Africa, Europe and North America, and Rest of the World. Tuition remains first, with tutorials and interactive learning substantially stronger, QS next and social media last. All associated model outputs are regenerated from the revised synthetic labels; chart scores are not manually rescaled. East and South East Asia and business scenario outcomes are unchanged.
+
+Version 2.1 uses a separate browser storage key and rejects older session imports to avoid silently replacing evidence recorded in a previous exercise. Earlier stored sessions remain untouched under their original keys; keep previously exported reports for earlier runs.
