@@ -1,6 +1,6 @@
 /* Authored fictional teaching scenarios. Amounts are pounds; intake is annual. */
 window.SIM = (() => {
-  const version = '2.0.0';
+  const version = '2.1.0';
   const baseline = {enrolments:2000,rank:96,experience:65};
   const categories = ['QS-related improvement','Staff and technology','Social media','Scholarships and bursaries'];
   const packages = {

@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const KEY='lubs5302m-executive-v2';
+  const KEY='lubs5302m-executive-v2.1';
   let state=Core.fresh(),storageOK=true,pendingSaved=null,returnFocus=null;
   const main=document.getElementById('main'),dialog=document.getElementById('dialog');
   const $=id=>document.getElementById(id),esc=Views.e;
